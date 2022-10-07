@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
+    FirstJob.perform_later 1,2,3,4
     @users = User.all
   end
 
